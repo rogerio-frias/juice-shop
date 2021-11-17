@@ -42,11 +42,9 @@ jobs:
            
   job3:
     runs-on: windows-latest
-    needs: 
-      - job1
-      - job2
+    needs: [job1 , job2]
+      # - job1
+      # - job2
     steps:
-      - name: Checkout do repositório
-        uses: actions/checkout@v2
       - name: Imprime 'Hello World final'
         run: echo Hello world final!
