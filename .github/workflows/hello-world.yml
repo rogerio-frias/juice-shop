@@ -40,3 +40,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Imprime 'Hello World'
         run: echo Hello Windows world!
+           
+  job3:
+    runs-on: windows-latest
+    needs: 
+      - job1
+      - job2
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v2
+      - name: Imprime 'Hello World final'
+        run: echo Hello world final!
